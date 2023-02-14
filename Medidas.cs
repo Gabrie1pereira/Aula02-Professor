@@ -1,8 +1,8 @@
 namespace Aula02
 {
-    public partial class frmConversao : Form
+    public partial class Medidas : Form
     {
-        public frmConversao()
+        public Medidas()
         {
             InitializeComponent();
         }
@@ -11,12 +11,12 @@ namespace Aula02
         {
             if ( this.cboTipoConversao.SelectedIndex== 0 )
             {
-                float kilo = 0 ;
-                 if (float.TryParse(txtValorOriginal.Text, out kilo) )
+                float Celsius = 0;
+                 if (float.TryParse(txtValorOriginal.Text, out Celsius ) )
                 {
 
-                    float libras = (float)(kilo * 2.20462);
-                    txtValorConvertido.Text = $"{libras:N2}";
+                    float Fahrenheit = (float)(Celsius* 9/ 5 +32);
+                    txtValorConvertido.Text = $"{Fahrenheit:N1}";
                 }
                 else
                 {
@@ -28,11 +28,11 @@ namespace Aula02
             {
 
                 {
-                float libras = 0;
-                if (float.TryParse(txtValorOriginal.Text, out libras))
+                float Fahrenheit = 0;
+                if (float.TryParse(txtValorOriginal.Text, out Fahrenheit ))
                     {
-                    float kilo = (float)(libras / 2.20462);
-                    txtValorConvertido.Text = $"{kilo:N2}";
+                    float Celsius = (float)((Fahrenheit-32)*5/9);
+                    txtValorConvertido.Text = $"{Celsius:N1}";
                 }
                 else
                     {
@@ -46,6 +46,16 @@ namespace Aula02
             {
                 MessageBox.Show("Selecione o tipo de conversão!");
             }
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoConversao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

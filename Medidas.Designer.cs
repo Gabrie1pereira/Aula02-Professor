@@ -1,6 +1,6 @@
 ﻿namespace Aula02
 {
-    partial class frmConversao
+    partial class Medidas
     {
         /// <summary>
         ///  Required designer variable.
@@ -41,12 +41,13 @@
             // 
             this.cboTipoConversao.FormattingEnabled = true;
             this.cboTipoConversao.Items.AddRange(new object[] {
-            "Kilo -> Libra",
-            "Libra ->Kilo"});
-            this.cboTipoConversao.Location = new System.Drawing.Point(48, 162);
+            "Celsius -> Fahrenheit",
+            "Fahrenheit ->Celsius"});
+            this.cboTipoConversao.Location = new System.Drawing.Point(40, 161);
             this.cboTipoConversao.Name = "cboTipoConversao";
-            this.cboTipoConversao.Size = new System.Drawing.Size(283, 49);
+            this.cboTipoConversao.Size = new System.Drawing.Size(273, 40);
             this.cboTipoConversao.TabIndex = 0;
+            this.cboTipoConversao.SelectedIndexChanged += new System.EventHandler(this.cboTipoConversao_SelectedIndexChanged);
             // 
             // btnConverter
             // 
@@ -63,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(40, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 41);
+            this.label1.Size = new System.Drawing.Size(240, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Valor para converter: ";
             // 
@@ -71,7 +72,7 @@
             // 
             this.txtValorOriginal.Location = new System.Drawing.Point(367, 94);
             this.txtValorOriginal.Name = "txtValorOriginal";
-            this.txtValorOriginal.Size = new System.Drawing.Size(170, 47);
+            this.txtValorOriginal.Size = new System.Drawing.Size(170, 39);
             this.txtValorOriginal.TabIndex = 3;
             this.txtValorOriginal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -80,7 +81,7 @@
             this.txtValorConvertido.Location = new System.Drawing.Point(367, 248);
             this.txtValorConvertido.Name = "txtValorConvertido";
             this.txtValorConvertido.ReadOnly = true;
-            this.txtValorConvertido.Size = new System.Drawing.Size(170, 47);
+            this.txtValorConvertido.Size = new System.Drawing.Size(170, 39);
             this.txtValorConvertido.TabIndex = 5;
             this.txtValorConvertido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -89,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 251);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 41);
+            this.label2.Size = new System.Drawing.Size(200, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "Valor convertido: ";
             // 
@@ -101,14 +102,15 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(523, 49);
             this.lblTitulo.TabIndex = 6;
-            this.lblTitulo.Text = "Conversao de Medidas";
+            this.lblTitulo.Text = "Conversao de Temperaturas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // frmConversao
+            // Medidas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 355);
+            this.ClientSize = new System.Drawing.Size(549, 317);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtValorConvertido);
             this.Controls.Add(this.label2);
@@ -120,9 +122,9 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmConversao";
+            this.Name = "Medidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Conversao de medidas";
+            this.Text = "Conversao de Temperaturas";
             this.ResumeLayout(false);
             this.PerformLayout();
 
